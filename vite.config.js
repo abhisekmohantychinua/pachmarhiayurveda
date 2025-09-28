@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/pachmarhiayurveda/', // only needed if deploying to GitHub Pages
+  base: '/pachmarhiayurveda/',
   build: {
     outDir: 'dist'
   }
