@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A website to showcase detailed casestudy How Obsidian transformed a legacy ayurveda brand into a digital success.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

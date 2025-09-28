@@ -3,6 +3,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   base: '/pachmarhiayurveda/',
   build: {
-    outDir: 'dist'
+    outDir: 'build'
   }
 });
