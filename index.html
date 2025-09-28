@@ -7,8 +7,54 @@
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <p>Testing CICD for github</p>
+    <header class="header">
+      <nav class="nav" role="navigation" aria-label="Main Navigation">
+        <!-- Logo -->
+        <a href="/" class="nav__logo">
+          <img src="./src/images/logo.png" alt="Pachmarhi Ayurveda Logo" />
+        </a>
+
+        <!-- Menu Items -->
+        <ul class="nav__items" data-opened="false">
+          <li class="nav__item"><a href="#home">Home</a></li>
+          <li class="nav__item"><a href="#works">Works</a></li>
+          <li class="nav__item"><a href="#services">Services</a></li>
+          <li class="nav__item"><a href="#blogs">Blogs</a></li>
+          <li class="nav__item"><a href="#about">About Us</a></li>
+          <li class="nav__item"><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <!-- Hamburger Button -->
+        <button
+          class="nav__menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+        </button>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="hero" id="home">
+        <p class="hero__subtitle">[Case Study]</p>
+        <h1 class="hero__title">Pachmarhi Ayurveda</h1>
+        <button type="button" class="hero__button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path
+              d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z"
+            />
+          </svg>
+        </button>
+        <p>
+          How We Transformed a <br />
+          Legacy Ayurveda Brand <br />
+          into a Digital Success
+        </p>
+      </section>
+    </main>
+
     <script type="module" src="./src/js/script.js"></script>
   </body>
 </html>
