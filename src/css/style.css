@@ -183,7 +183,7 @@ body {
     width: 100%;
     background: var(--white);
     display: none;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
   }
 
   .nav__items[data-opened="true"] {
@@ -197,7 +197,7 @@ body {
 
 @media (max-width: 480px) {
   .nav__logo img {
-    width: 5rem;
+    width: 8rem;
   }
 }
 
@@ -212,7 +212,7 @@ body {
    Hero
 ========= */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background: url("../images/hero-bg.png") no-repeat center center/cover;
   width: 100%;
   color: var(--white);
   text-align: center;
@@ -228,12 +228,12 @@ body {
   line-height: 100%;
   letter-spacing: -1.5%;
   text-transform: uppercase;
-  margin-top: 5rem;
+  margin-top: 15rem;
 }
 .hero__title {
   font-size: var(--fs-4xl);
   font-weight: var(--fw-bold);
-  margin-bottom: 10rem;
+  margin-bottom: 15rem;
   line-height: 100%;
   letter-spacing: -1.5%;
   text-transform: uppercase;
@@ -286,8 +286,12 @@ body {
   .hero {
     padding: 4rem 1rem;
   }
+  .hero__subtitle {
+    margin-top: 10rem;
+  }
   .hero__title {
     font-size: var(--fs-2xl);
+    margin-bottom: 10rem;
   }
   .hero__text {
     font-size: var(--fs-lg);
@@ -458,6 +462,7 @@ body {
   align-items: center;
   padding: 4rem 3rem;
   background-color: var(--gray-100);
+  position: relative;
 }
 .challenges__title-container {
   width: 40%;
@@ -491,6 +496,7 @@ body {
   text-align: start;
   width: 50%;
   list-style: none;
+  z-index: 2;
 }
 .challenges__item {
   padding: 2rem 1rem 2rem 0;
@@ -531,6 +537,13 @@ body {
   color: var(--primary-950);
   opacity: 0.8;
 }
+.challenges__dart-board {
+  position: absolute;
+  max-width: 30%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
 @media (max-width: 768px) {
   .challenges {
     flex-wrap: wrap;
@@ -541,6 +554,7 @@ body {
   }
   .challenges_items {
     width: auto;
+    margin-bottom: 8rem;
   }
 }
 @media (max-width: 480px) {
@@ -555,6 +569,7 @@ body {
   }
   .challenges_items {
     width: 100%;
+    margin-bottom: 2rem;
   }
   .challenges_item-title {
     font-size: var(--fs-md);
@@ -607,40 +622,81 @@ body {
 }
 
 .approach__laptop-mockup {
-  height: 500px;
-  width: 700px;
-  background-color: var(--gray-300);
+  background-color: transparent;
+}
+.approach__laptop-mockup img {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
 }
 
 .branding {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: end;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
-  padding: 4rem 3rem;
+  padding: 4rem 0 4rem 3rem;
 }
-.branding div {
+.branding figure {
   height: 500px;
-  width: 350px;
-  background-color: var(--gray-300);
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.branding__phone-mockup {
+  background-color: #00a859;
+  padding: 2rem 0;
+}
+.branding__phone-mockup img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.branding__brand {
+  background-color: var(--gray-100);
+  padding: 0 2rem;
+}
+.branding__brand img {
+  vertical-align: middle;
+  width: 100%;
+  object-fit: scale-down;
+  object-position: center;
+}
+@media (max-width: 1128px) {
+  .approach {
+    flex-direction: column;
+    align-items: start;
+    justify-content: unset;
+  }
+  .approach__block-text {
+    margin-bottom: 2rem;
+  }
+  .approach__laptop-mockup {
+    align-self: flex-end;
+  }
 }
 
 @media (max-width: 768px) {
-  .approach {
-    padding: 4rem 3rem;
-  }
   .approach__block-text {
     margin-bottom: 2rem;
   }
   .branding {
     padding: 4rem 3rem;
     flex-direction: column;
+    align-items: center;
+  }
+  .branding figure {
+    height: 450px;
+    width: 450px;
   }
 }
 
 @media (max-width: 480px) {
   .approach {
-    padding: 4rem 1rem;
+    padding: 4rem 0 4rem 1rem;
   }
   .approach__title {
     margin-bottom: 2rem;
@@ -656,7 +712,7 @@ body {
     padding: 4rem 0;
     flex-direction: column;
   }
-  .branding div {
+  .branding figure {
     width: 100%;
   }
 }
