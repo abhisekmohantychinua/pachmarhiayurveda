@@ -1418,6 +1418,72 @@ body {
 }
 
 /* ======
+   CTA
+========= */
+.cta {
+  padding: 4rem 0;
+  text-align: center;
+}
+.cta__logo {
+  width: 80%;
+  max-width: 800px;
+  margin: 4rem auto;
+}
+.cta__logo img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.cta__block {
+  width: 100%;
+  background-color: var(--primary);
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.cta__block-title {
+  font-weight: var(--fw-light);
+  font-size: 58px;
+  line-height: 100%;
+  letter-spacing: -1.5%;
+  color: var(--white);
+}
+.cta__block-title span {
+  font-family: var(--font-tertiary);
+  font-style: italic;
+}
+.cta__block-button {
+  padding: 1rem 2rem;
+  background-color: var(--white);
+}
+.cta__block-button svg {
+  height: 72px;
+  width: 72px;
+  fill: var(--primary-950);
+}
+@media (max-width: 768px) {
+  .cta__block {
+    flex-direction: column;
+  }
+  .cta__block-button {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta__block {
+    padding: 2rem 1rem;
+  }
+  .cta__block-title {
+    font-size: 40px;
+  }
+  .cta__block-button {
+    padding: 0.5rem 1rem;
+  }
+}
+/* ======
    Footer
 ========= */
 .footer {
