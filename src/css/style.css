@@ -1082,7 +1082,118 @@ body {
     padding: 0.5rem;
   }
 }
-
+/* ======
+   PR and Brand Awareness
+========= */
+.pr {
+  padding: 4rem;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.pr__block {
+  width: 45%;
+}
+.pr__block-title {
+  font-weight: var(--fw-semibold);
+  font-size: 44px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--primary-950);
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+.pr__block-text {
+  font-family: var(--font-secondary);
+  font-weight: var(--fw-regular);
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -1.5%;
+  color: var(--primary-950);
+  opacity: 0.8;
+}
+.pr__image {
+  width: 45%;
+  max-width: 550px;
+  position: relative;
+}
+.pr__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.pr__image figcaption {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    rgba(25, 24, 58, 0.43) 0%,
+    rgba(50, 50, 62, 0.43) 100%
+  );
+  backdrop-filter: blur(4px);
+  text-align: center;
+  font-family: var(--font-tertiary);
+  font-weight: var(--fw-regular);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 150%;
+  letter-spacing: -1.5%;
+  color: var(--white);
+  padding: 2rem;
+}
+.pr__logos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+.pr__logos img {
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.8;
+  mix-blend-mode: luminosity;
+}
+@media (max-width: 768px) {
+  .pr {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .pr__block {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .pr__image {
+    width: 100%;
+  }
+  .pr__logos {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 480px) {
+  .pr {
+    padding: 4rem 1rem;
+  }
+  .pr__block-title {
+    font-size: var(--fs-2xl);
+  }
+  .pr__block-text {
+    font-size: var(--fs-sm);
+  }
+  .pr__image figcaption {
+    padding: 1rem 0.5rem;
+    font-size: var(--fs-sm);
+  }
+}
 /* ======
    Footer
 ========= */
