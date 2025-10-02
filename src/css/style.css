@@ -636,7 +636,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 4rem 0 4rem 3rem;
+  padding: 4rem 4rem 4rem 3rem;
 }
 .branding figure {
   height: 500px;
@@ -716,6 +716,114 @@ body {
     width: 100%;
   }
 }
+
+/* ======
+   Ads
+========= */
+.ads {
+  padding: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ads__title {
+  font-weight: var(--fw-semibold);
+  font-size: 44px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--primary-950);
+  margin-bottom: 1rem;
+  width: 50%;
+}
+.ads__subtitle {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -1.5%;
+  color: var(--primary-950);
+  opacity: 0.8;
+  width: 50%;
+}
+.ads__card-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+.ads__card {
+  background-color: var(--gray-100);
+  border-radius: 18px;
+  text-align: center;
+  width: 250px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.ads__card::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 340px;
+  background-color: #00a859;
+  border-radius: 18px;
+  bottom: -8px;
+  right: -8px;
+  z-index: -1;
+}
+.ads__card svg {
+  height: 74px;
+  width: 74px;
+}
+.ads__card h3 {
+  font-family: var(--font-secondary);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: 150%;
+  letter-spacing: -1.5%;
+  color: var(--primary);
+}
+.ads__card p {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  font-weight: var(--fw-medium);
+  line-height: 150%;
+  letter-spacing: -1.5%;
+  color: var(--primary-950);
+  opacity: 0.8;
+  width: 200px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .ads {
+    flex-direction: column;
+  }
+  .ads__title {
+    width: 100%;
+  }
+  .ads__subtitle {
+    width: 100%;
+  }
+  .ads__card-container {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .ads {
+    padding: 4rem 1rem;
+  }
+  .ads__card-container {
+    flex-direction: column;
+  }
+}
+
 /* ======
    Footer
 ========= */
