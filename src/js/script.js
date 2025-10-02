@@ -17,3 +17,18 @@ videoWrapper.addEventListener("mouseenter", () => {
 videoWrapper.addEventListener("mouseleave", () => {
   video.pause();
 });
+
+// Reveal animation for elements
+const elements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove("reveal");
+      entry.target.classList.add("revealed");
+      observer.unobserve(entry.target); // stop tracking once revealed
+    }
+  });
+});
+
+elements.forEach((el) => observer.observe(el));

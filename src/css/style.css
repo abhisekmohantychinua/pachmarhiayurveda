@@ -221,6 +221,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 4rem;
+  width: 1px;
+  height: 5%;
+  background-color: var(--white);
 }
 .hero__subtitle {
   font-style: var(--fs-sm);
@@ -286,6 +296,9 @@ body {
   .hero {
     padding: 4rem 1rem;
   }
+  .hero::after {
+    left: 1rem;
+  }
   .hero__subtitle {
     margin-top: 10rem;
   }
@@ -311,6 +324,16 @@ body {
   align-items: start;
   flex-wrap: nowrap;
   gap: 4rem;
+  position: relative;
+}
+.industry::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 4rem;
+  width: 1px;
+  height: 5%;
+  background-color: var(--primary-950);
 }
 .industry__title-container {
   width: 10%;
@@ -442,6 +465,9 @@ body {
     justify-content: start;
     padding: 4rem 2rem;
   }
+  .industry::after {
+    left: 2rem;
+  }
   .industry__services-container {
     width: 100%;
   }
@@ -463,6 +489,16 @@ body {
   padding: 4rem 3rem;
   background-color: var(--gray-100);
   position: relative;
+}
+.challenges::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 4rem;
+  width: 1px;
+  height: 20%;
+  background-color: var(--primary-950);
+  transform: translateY(-50%);
 }
 .challenges__title-container {
   width: 40%;
@@ -561,6 +597,9 @@ body {
   .challenges {
     padding: 4rem 2rem;
   }
+  .challenges::after {
+    left: 2rem;
+  }
   .challenges__title-container {
     width: 100%;
   }
@@ -658,12 +697,47 @@ body {
 .branding__brand {
   background-color: var(--gray-100);
   padding: 0 2rem;
+  position: relative;
 }
 .branding__brand img {
   vertical-align: middle;
   width: 100%;
   object-fit: scale-down;
   object-position: center;
+}
+.branding__brand::before {
+  content: "";
+  background: url("../images/leaf-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 180px;
+  width: 180px;
+  transform: translate(100%, -100%);
+  transition: transform 0.3s ease-in-out;
+}
+.branding__brand::after {
+  content: "";
+  background: url("../images/leaf-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 250px;
+  width: 220px;
+  transform: translate(-100%, 100%);
+  transition: transform 0.3s ease-in-out;
+}
+.branding__brand:hover::before {
+  transform: translate(0, 0);
+}
+.branding__brand:hover::after {
+  transform: translate(0, 0);
 }
 @media (max-width: 1128px) {
   .approach {
@@ -1614,4 +1688,32 @@ body {
     flex-wrap: nowrap;
     align-items: center;
   }
+}
+
+/* ================================================================================================
+                                              Animations
+   ================================================================================================ */
+
+/* Initial States */
+.branding__brand.reveal img,
+.branding__phone-mockup.reveal img {
+  transform: translateY(500px);
+  transition: transform 1s ease-in-out;
+}
+.approach__laptop-mockup.reveal img,
+.social-media__image.reveal img {
+  transform: translateX(1000px);
+  transition: transform 1s ease-in-out;
+}
+
+/* Final States */
+.branding__brand.revealed img,
+.branding__phone-mockup.revealed img {
+  transform: translateY(0);
+  transition: transform 1s ease-in-out;
+}
+.approach__laptop-mockup.revealed img,
+.social-media__image.revealed img {
+  transform: translateX(0);
+  transition: transform 1s ease-in-out;
 }
