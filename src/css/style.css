@@ -1195,6 +1195,107 @@ body {
   }
 }
 /* ======
+   Results
+========= */
+.results {
+  background: var(--primary-950);
+  padding: 4rem 3rem;
+  text-align: center;
+}
+.results__title {
+  font-weight: var(--fw-light);
+  font-size: var(--fs-3xl);
+  color: var(--white);
+  opacity: 0.9;
+  margin-bottom: 4rem;
+  line-height: 100%;
+  letter-spacing: -1.5%;
+  text-align: center;
+}
+.results__card {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  border-radius: 10px;
+  margin: 2rem auto;
+  width: fit-content;
+}
+.results__card-info {
+  padding: 2rem 1rem;
+  text-align: start;
+}
+.results__card-title {
+  font-family: var(--font-tertiary);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  line-height: 110%;
+  letter-spacing: 0;
+  color: var(--primary-950);
+  margin-bottom: 1rem;
+}
+.results__card-title span {
+  font-family: var(--font-primary);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.results__card-text {
+  font-family: var(--font-secondary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-xs);
+  line-height: 150%;
+  letter-spacing: -1.5%;
+  color: var(--primary-950);
+  opacity: 0.8;
+  max-width: 250px;
+}
+.results__card-image {
+  width: 60%;
+  height: 100%;
+  max-width: 500px;
+}
+.results__card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 768px) {
+  .results__card {
+    flex-direction: column;
+    align-items: start;
+    margin: 1rem auto;
+  }
+  .results__card:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .results__card-info {
+    padding: 2rem 1rem;
+    text-align: start;
+  }
+  .results__card-text {
+    max-width: 400px;
+  }
+  .results__card-image {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .results {
+    padding: 4rem 1rem;
+  }
+  .results__title {
+    font-size: var(--fs-2xl);
+  }
+  .results__card-image {
+    width: 100%;
+  }
+}
+/* ======
    Footer
 ========= */
 .footer {
