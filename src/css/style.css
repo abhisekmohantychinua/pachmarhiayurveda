@@ -735,6 +735,7 @@ body {
   color: var(--primary-950);
   margin-bottom: 1rem;
   width: 50%;
+  opacity: 0.9;
 }
 .ads__subtitle {
   font-family: var(--font-secondary);
@@ -843,6 +844,7 @@ body {
   letter-spacing: 0%;
   color: var(--primary-950);
   margin-bottom: 1rem;
+  opacity: 0.9;
 }
 .social-media__text {
   font-family: var(--font-secondary);
