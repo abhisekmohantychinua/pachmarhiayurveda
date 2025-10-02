@@ -7,3 +7,13 @@ menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("active");
   menuBtn.setAttribute("aria-expanded", !isOpened);
 });
+
+// Video Play Control Logic
+const videoWrapper = document.getElementById("e-commerce-video-wrapper");
+const video = document.getElementById("e-commerce-video");
+videoWrapper.addEventListener("mouseenter", () => {
+  video.play();
+});
+videoWrapper.addEventListener("mouseleave", () => {
+  video.pause();
+});
