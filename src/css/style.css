@@ -297,7 +297,7 @@ body {
     padding: 4rem 1rem;
   }
   .hero::after {
-    left: 1rem;
+    left: 2rem;
   }
   .hero__subtitle {
     margin-top: 10rem;
@@ -598,6 +598,7 @@ body {
     padding: 4rem 2rem;
   }
   .challenges::after {
+    height: 10%;
     left: 2rem;
   }
   .challenges__title-container {
